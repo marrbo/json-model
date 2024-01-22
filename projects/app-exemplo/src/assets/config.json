@@ -1,0 +1,14 @@
+{
+    "sentry": {
+        "sentryDsn": "#{sentryDsn}",
+        "sentryRelease": "#{sentryRelease}",
+        "sentryEnvironment": "#{sentryEnvironment}"
+    },
+    "environment": {
+        "production": true,
+        "ambiente": "#{ambiente}",
+        "api": "#{api}",
+        "apiGoogle": "#{apiGoogle}",
+        "cargainicial": "#{cargainicial}"
+    }
+}
