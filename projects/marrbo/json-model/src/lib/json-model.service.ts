@@ -1,5 +1,3 @@
-import { DOCUMENT } from '@angular/common';
-
 /**
  * Checks if a value is not undefined or null
  * @param {T} value - the value to check
