@@ -1,3 +1,5 @@
+import { DOCUMENT } from '@angular/common';
+
 /**
  * Checks if a value is not undefined or null
  * @param {T} value - the value to check
@@ -25,19 +27,12 @@ export class JsonFileModule {
 */
 export function JsonModel(environment: any, config: any, configDebug: any): JsonFileModule {
   type JsonModelSettings = typeof config | typeof configDebug;
-  
+
   const dev = document.location.hostname === 'localhost' && environment.production === false;
 
   let _settings: JsonModelSettings = Object.assign(new JsonFileModule(), dev ? configDebug : config);
   
-  Object.keys(environment).forEach((optionName: string) => {
-    if (_settings.environment) {  
-      const value = _settings.environment[optionName];
-      if (hasValue(value)) {
-          environment[optionName] = value;
-      }
-    }
-  });
+  Object.assign(environment, _settings?.environment);
 
   if (environment.production === false) {
     console.log('environment atualizado:', JSON.stringify(environment));

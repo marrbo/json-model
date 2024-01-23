@@ -1,5 +1,4 @@
 export const environment = {
-  
     // variavel production
     production: true,
     // variavel uri

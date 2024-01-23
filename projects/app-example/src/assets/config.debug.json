@@ -5,6 +5,7 @@
         "sentryEnvironment": "Desenvolvimento"
     },
     "environment": {
+        "app": "app-example",
         "production": false,
         "ambiente": "localhost",
         "api": "https://localhost:44348/v1/",

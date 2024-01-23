@@ -7,6 +7,8 @@ import * as ConfigDebug from './assets/config.debug.json';
 import * as Config from './assets/config.json';
 import { environment } from './environments/environment';
 
+sessionStorage['environment'] = JSON.stringify(environment);
+
 const _settings = JsonModel(environment, Config, ConfigDebug);
 
 bootstrapApplication(AppComponent, appConfig)

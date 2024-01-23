@@ -5,6 +5,7 @@
         "sentryEnvironment": "#{sentryEnvironment}"
     },
     "environment": {
+        "app": "app-example",
         "production": true,
         "ambiente": "#{ambiente}",
         "api": "#{api}",

@@ -17,5 +17,6 @@ export class AppComponent {
   title = 'app-exemplo';
   
   public _env: config = Object.assign({} as config, environment);
+  public _envOld: config = sessionStorage['environment'];
 
 }
